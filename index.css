@@ -1,0 +1,161 @@
+body{
+  width:100%;
+  height:100%;
+  overflow-x:hidden;
+  overflow-y: scroll;
+  background-color: #f9f9f9;
+  padding:0;
+  margin:0px;
+}
+.everything{
+     display: grid;
+     grid-template-areas:
+  "topbar topbar topbar topbar topbar"
+  "sidebar interests interests interests interests"
+  "sidebar videos videos videos videos";
+   grid-row-gap: 3vh;
+   grid-column-gap: 20px;
+}
+#yt-logo{
+  font-weight: 900;
+  font-size: 1.3em;
+  color:#212121;
+}
+#yt-logo::after{
+  content:'IN';
+  font-weight: 100;
+  font-size: 0.7em;
+}
+.icons{
+  cursor:pointer;
+  margin-right:25px;
+}
+#search-bar{
+  width:40vw;
+  height:4vh;
+  border: 1px solid #999;
+  padding:15px;
+  border-right: none;
+  outline:none;
+  font-size:1.1em;
+}
+button{
+  margin-left: -1%;
+  height:4.8vh;
+  width:5vw;
+  background:#f3f3f3;
+  border:1px solid #999;
+  outline:none;
+  cursor:pointer;
+}
+#top-bar{
+  background-color: white;
+  grid-area:topbar;
+  width:100%;
+  padding-top:10px;
+  padding-bottom:10px;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+}
+#top-section, #middle-section, #bottom-section{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+#top-section div{
+  margin-left:20px;
+}
+#interests{
+  grid-area:interests;
+  width:100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+#interests > div{
+  display:inline-block;
+  margin-right:1%;
+  border:1px solid #f1f1f1;
+  background-color:#f2f2f2;
+  border-radius: 20px;
+  padding:5px;
+}
+#sidebar{
+  background-color: white;
+  font-size:10px;
+  text-align: center;
+  grid-area: sidebar;
+  display: inline-block;
+}
+#sidebar > div{
+  margin-bottom:15px;
+}
+#sidebar span{
+  display: inline-block;
+  padding-top: 3px;
+  padding-bottom:15px;
+}
+a{
+  text-decoration: none;
+  color:unset;
+}
+.thumbnail
+{
+  height:150px;
+  width:300px;
+}
+section.video-top::after{
+  display: none;
+  content: '17:45';
+  background: black;
+  color:white;
+  border-radius: 3px;
+  padding:1px;
+  position: relative;
+  bottom:10px;
+  right:50px;
+}
+.channel-logo
+{
+  height:40px;
+  width:40px;
+  border-radius: 50%;
+}
+.channel-name
+{
+  font-weight: bold;
+  font-size: 1.2em;
+
+}
+.video-name
+{
+  font-size: 1.1em;
+}
+.video-secton{
+  display:flex;
+  flex-direction: column;
+}
+.video-bottom
+{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.video-metadata{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align:justify
+}
+#videos-panel
+{
+  grid-name:videos;
+  display:grid;
+  grid-template-columns: repeat(4,minmax(200px,300px));
+  grid-row-gap:50px;
+  grid-column-gap:30px;
+}
